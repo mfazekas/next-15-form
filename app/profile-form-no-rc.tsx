@@ -20,6 +20,8 @@ const formSchema = z.object({
 })
 
 export function ProfileForm() {
+  "use no memo"; // opts out this component from being compiled by React Compiler
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
